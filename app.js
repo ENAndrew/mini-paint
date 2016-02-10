@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     var color = 'white';
     var colors = 'red green blue yellow white black';
-    
+
     $('.box').on('click', function(){
         $(this).addClass(color);
     });
@@ -10,6 +10,25 @@ $(document).ready(function(){
     $('.box').on('dblclick', function() {
         $(this).removeClass(color);
     });
+    
+    ///drag function//////////////////////////
+    
+    var isDown = false;
+    
+    $('.box').mousedown(function() {
+        isDown = true;
+    });
+    
+    $('.box').mouseup(function(){
+        isDown = false;
+    });
+    
+    $('.box').mouseenter(function(){
+        if(isDown) {
+            $(this).addClass(color);
+        };
+    });
+    ////////////////////////////////////////////
     
     $('#reset').on('click', function() {
         $('.box').removeClass(colors);
