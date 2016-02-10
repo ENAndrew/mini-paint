@@ -25,9 +25,9 @@ div {
 }
 
 div div {
-    width: 1%;
-    height: 1%;
-    outline: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
     float: left;
     background: lightgrey;
     border-radius: 50%;
